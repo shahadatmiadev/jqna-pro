@@ -1,0 +1,418 @@
+/**
+ * JQNA Pro Frontend Styles
+ *
+ * @package JQNA_Pro
+ */
+
+/* ------------------------------------------------------------------ */
+/* CSS Custom Properties                                               */
+/* ------------------------------------------------------------------ */
+.jqna-wrap {
+	--jqna-primary:     #1a6bbf;
+	--jqna-primary-dk:  #145299;
+	--jqna-success:     #2e7d32;
+	--jqna-danger:      #c62828;
+	--jqna-warning:     #e65100;
+	--jqna-surface:     #ffffff;
+	--jqna-bg:          #f4f6f9;
+	--jqna-border:      #dde1e7;
+	--jqna-text:        #1c1f24;
+	--jqna-muted:       #6b7280;
+	--jqna-radius:      8px;
+	--jqna-shadow:      0 2px 8px rgba(0,0,0,.08);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	color: var(--jqna-text);
+	line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ */
+/* Utility buttons                                                     */
+/* ------------------------------------------------------------------ */
+.jqna-btn {
+	display: inline-block;
+	padding: 9px 20px;
+	border-radius: var(--jqna-radius);
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background .15s, opacity .15s;
+	line-height: 1.4;
+}
+.jqna-btn-primary {
+	background: var(--jqna-primary);
+	color: #fff;
+}
+.jqna-btn-primary:hover,
+.jqna-btn-primary:focus {
+	background: var(--jqna-primary-dk);
+	color: #fff;
+}
+.jqna-btn-logout {
+	background: var(--jqna-danger);
+	color: #fff;
+	font-size: 13px;
+	padding: 6px 14px;
+}
+.jqna-btn-logout:hover {
+	opacity: .85;
+	color: #fff;
+}
+.jqna-btn-ghost {
+	background: transparent;
+	color: var(--jqna-muted);
+	border: 1px solid var(--jqna-border);
+	font-size: 13px;
+	padding: 5px 12px;
+}
+.jqna-btn-ghost:hover {
+	background: var(--jqna-bg);
+}
+
+/* ------------------------------------------------------------------ */
+/* Alert / error box                                                   */
+/* ------------------------------------------------------------------ */
+.jqna-alert {
+	padding: 12px 16px;
+	border-radius: var(--jqna-radius);
+	margin-bottom: 18px;
+	font-size: 14px;
+}
+.jqna-alert-error {
+	background: #fdecea;
+	color: var(--jqna-danger);
+	border: 1px solid #f5c6cb;
+}
+.jqna-alert-success {
+	background: #edf7ed;
+	color: var(--jqna-success);
+	border: 1px solid #c8e6c9;
+}
+
+/* ------------------------------------------------------------------ */
+/* Login / access form                                                 */
+/* ------------------------------------------------------------------ */
+.jqna-login-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 40px 16px;
+}
+.jqna-login-box {
+	background: var(--jqna-surface);
+	border-radius: 12px;
+	box-shadow: var(--jqna-shadow);
+	padding: 36px 40px;
+	width: 100%;
+	max-width: 460px;
+}
+.jqna-login-title {
+	margin: 0 0 6px;
+	font-size: 22px;
+	color: var(--jqna-text);
+}
+.jqna-login-desc {
+	margin: 0 0 24px;
+	color: var(--jqna-muted);
+	font-size: 14px;
+}
+.jqna-login-form .jqna-btn-primary {
+	width: 100%;
+	padding: 12px;
+	font-size: 15px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Form fields (shared)                                                */
+/* ------------------------------------------------------------------ */
+.jqna-field {
+	margin-bottom: 18px;
+}
+.jqna-field label {
+	display: block;
+	margin-bottom: 6px;
+	font-weight: 600;
+	font-size: 14px;
+	color: var(--jqna-text);
+}
+.jqna-field input[type="text"],
+.jqna-field input[type="password"],
+.jqna-field input[type="tel"],
+.jqna-field input[type="email"],
+.jqna-field select {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 14px;
+	border: 1px solid var(--jqna-border);
+	border-radius: var(--jqna-radius);
+	font-size: 14px;
+	background: #fff;
+	color: var(--jqna-text);
+	transition: border-color .15s, box-shadow .15s;
+}
+.jqna-field input:focus,
+.jqna-field select:focus {
+	outline: none;
+	border-color: var(--jqna-primary);
+	box-shadow: 0 0 0 3px rgba(26,107,191,.15);
+}
+.jqna-hint {
+	display: block;
+	margin-top: 5px;
+	font-size: 12px;
+	color: var(--jqna-muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Topbar                                                              */
+/* ------------------------------------------------------------------ */
+.jqna-topbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 14px 0;
+	border-bottom: 2px solid var(--jqna-border);
+	margin-bottom: 24px;
+}
+.jqna-welcome {
+	font-size: 14px;
+	color: var(--jqna-muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* Two-column layout                                                   */
+/* ------------------------------------------------------------------ */
+.jqna-layout {
+	display: grid;
+	grid-template-columns: 1fr 280px;
+	gap: 28px;
+	align-items: flex-start;
+}
+
+/* Main area */
+.jqna-main {
+	min-width: 0;
+}
+.jqna-faq-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+.jqna-faq-header h2 {
+	margin: 0;
+	font-size: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Accordion                                                           */
+/* ------------------------------------------------------------------ */
+.jqna-accordion-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.jqna-accordion-item {
+	border: 1px solid var(--jqna-border);
+	border-radius: var(--jqna-radius);
+	background: var(--jqna-surface);
+	overflow: hidden;
+	box-shadow: var(--jqna-shadow);
+}
+.jqna-accordion-toggle {
+	width: 100%;
+	background: var(--jqna-surface);
+	border: none;
+	padding: 16px 20px;
+	text-align: left;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	transition: background .12s;
+}
+.jqna-accordion-toggle:hover,
+.jqna-accordion-toggle[aria-expanded="true"] {
+	background: #f0f4ff;
+}
+.jqna-accordion-title {
+	font-weight: 600;
+	font-size: 15px;
+	color: var(--jqna-text);
+	flex: 1;
+}
+.jqna-accordion-icon {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--jqna-primary);
+	flex-shrink: 0;
+	transition: transform .2s;
+}
+.jqna-accordion-toggle[aria-expanded="true"] .jqna-accordion-icon {
+	transform: rotate(45deg);
+}
+.jqna-accordion-panel {
+	padding: 16px 20px;
+	border-top: 1px solid var(--jqna-border);
+	background: #fafbfc;
+}
+.jqna-accordion-panel[hidden] {
+	display: none;
+}
+.jqna-accordion-answer {
+	font-size: 14px;
+	line-height: 1.75;
+	color: var(--jqna-text);
+}
+.jqna-no-answer {
+	font-style: italic;
+	color: var(--jqna-muted);
+	margin: 0;
+}
+.jqna-no-results {
+	text-align: center;
+	color: var(--jqna-muted);
+	padding: 32px 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Pagination                                                          */
+/* ------------------------------------------------------------------ */
+.jqna-pagination {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 20px;
+	padding: 12px 0;
+	border-top: 1px solid var(--jqna-border);
+}
+.jqna-page-btn {
+	background: var(--jqna-primary);
+	color: #fff;
+	border: none;
+	padding: 7px 16px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 600;
+	transition: background .15s;
+}
+.jqna-page-btn:hover:not(:disabled) {
+	background: var(--jqna-primary-dk);
+}
+.jqna-page-btn:disabled {
+	background: var(--jqna-border);
+	color: var(--jqna-muted);
+	cursor: not-allowed;
+}
+.jqna-page-info {
+	font-size: 13px;
+	color: var(--jqna-muted);
+	flex: 1;
+	text-align: center;
+}
+.jqna-pagination-loader {
+	font-size: 13px;
+	color: var(--jqna-primary);
+}
+
+/* ------------------------------------------------------------------ */
+/* Submit question form                                                */
+/* ------------------------------------------------------------------ */
+.jqna-submit-section {
+	margin-top: 36px;
+	background: var(--jqna-bg);
+	border-radius: var(--jqna-radius);
+	padding: 24px 28px;
+	border: 1px solid var(--jqna-border);
+}
+.jqna-submit-section h3 {
+	margin: 0 0 18px;
+	font-size: 17px;
+}
+.jqna-submit-form .jqna-btn-primary {
+	min-width: 160px;
+}
+.jqna-form-msg {
+	margin-top: 12px;
+	font-size: 14px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar                                                             */
+/* ------------------------------------------------------------------ */
+.jqna-sidebar {
+	background: var(--jqna-surface);
+	border: 1px solid var(--jqna-border);
+	border-radius: var(--jqna-radius);
+	padding: 20px;
+	box-shadow: var(--jqna-shadow);
+	position: sticky;
+	top: 30px;
+}
+.jqna-sidebar-title {
+	margin: 0 0 14px;
+	font-size: 16px;
+	border-bottom: 2px solid var(--jqna-primary);
+	padding-bottom: 10px;
+}
+.jqna-cat-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+.jqna-cat-btn {
+	width: 100%;
+	background: none;
+	border: 1px solid transparent;
+	padding: 8px 12px;
+	border-radius: 6px;
+	text-align: left;
+	cursor: pointer;
+	font-size: 14px;
+	color: var(--jqna-text);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: background .12s, border-color .12s;
+}
+.jqna-cat-btn:hover {
+	background: var(--jqna-bg);
+	border-color: var(--jqna-border);
+}
+.jqna-cat-btn.active {
+	background: #e8f0fe;
+	border-color: var(--jqna-primary);
+	color: var(--jqna-primary);
+	font-weight: 600;
+}
+.jqna-cat-count {
+	font-size: 12px;
+	color: var(--jqna-muted);
+	font-weight: normal;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 768px) {
+	.jqna-layout {
+		grid-template-columns: 1fr;
+	}
+	.jqna-sidebar {
+		position: static;
+		order: -1; /* Sidebar above FAQ on mobile */
+	}
+	.jqna-login-box {
+		padding: 24px 20px;
+	}
+	.jqna-topbar {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+}
